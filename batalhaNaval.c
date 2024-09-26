@@ -4,16 +4,154 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
 // Siga os comentários para implementar cada parte do desafio.
 
-int main() {
-    // Nível Novato - Posicionamento dos Navios
-    // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
-    // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
-    // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
+#define LINHAS 3
+#define COLUNAS 5
 
-    // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
-    // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
-    // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
-    // Sugestão: Exiba o tabuleiro completo no console, mostrando 0 para posições vazias e 3 para posições ocupadas.
+int main() {
+    int matriz[LINHAS][COLUNAS];
+    int soma = 0;
+
+    printf("Cone:\n");
+for (int i = 0; i < LINHAS; i++){
+        for (int j = 0; j < COLUNAS; j++){
+
+            matriz[i][j] = soma;
+            if ((i == 0) && (j == 2)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //1
+            } else if ((i == 1) && (j == 1)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //2
+            }  else if ((i == 1) && (j == 2)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //3
+            } else if ((i == 1) && (j == 3)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //4
+            } else if ((i == 2) && (j == 0)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //5
+            } else if ((i == 2) && (j == 1)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //6
+            } else if ((i == 2) && (j == 2)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //7
+            } else if ((i == 2) && (j == 3)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //8
+            } else if ((i == 2) && (j == 4)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //9
+
+            } else {
+                printf("%d ", matriz[i][j]);
+            }
+
+            
+        }
+        printf("\n");
+        if (i == 5){
+            break;
+        }
+    }
+
+    printf("\n");
+
+    printf("Octaedro:\n");
+for (int i = 0; i < LINHAS; i++){
+        for (int j = 0; j < COLUNAS; j++){
+
+            matriz[i][j] = soma;
+            if ((i == 0) && (j == 2)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //1
+            } else if ((i == 1) && (j == 1)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //2
+            }  else if ((i == 1) && (j == 2)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //3
+            } else if ((i == 1) && (j == 3)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //4
+            } else if ((i == 2) && (j == 2)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //7
+            } else {
+                printf("%d ", matriz[i][j]);
+            }
+
+            
+        }
+        printf("\n");
+        if (i == 5){
+            break;
+        }
+    }
+
+    printf("\n");
+
+    printf("Cruz:\n");
+for (int i = 0; i < LINHAS; i++){
+        for (int j = 0; j < COLUNAS; j++){
+
+            matriz[i][j] = soma;
+            if ((i == 0) && (j == 2)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //1
+            } else if ((i == 1) && (j == 0)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //1.2
+            } else if ((i == 1) && (j == 1)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //2
+            }  else if ((i == 1) && (j == 2)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //3
+            } else if ((i == 1) && (j == 3)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //4
+            } else if ((i == 1) && (j == 4)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //4.2
+            } else if ((i == 2) && (j == 2)){
+                matriz[i][j] = 1;
+                printf("%d ", matriz[i][j]);
+                //7
+            } else {
+                printf("%d ", matriz[i][j]);
+            }
+
+            
+        }
+        printf("\n");
+        if (i == 5){
+            break;
+        }
+    }
+
+    printf("\n");
 
     // Nível Mestre - Habilidades Especiais com Matrizes
     // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
